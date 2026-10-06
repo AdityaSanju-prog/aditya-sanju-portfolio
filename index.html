@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aditya Sanju | CSE Student, AI/ML and Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b1a;--panel:rgba(14,21,44,.78);--line:#1f2b52;--text:#e6ebff;--mute:#8a96c0;--a:#5ce1e6;--b:#ffb454;--node:92,225,230;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef2fb;--panel:rgba(255,255,255,.85);--line:#c9d3ee;--text:#0e1530;--mute:#516088;--a:#0a7f9c;--b:#b45f06;--node:10,127,156}}
+:root[data-theme="light"]{--bg:#eef2fb;--panel:rgba(255,255,255,.85);--line:#c9d3ee;--text:#0e1530;--mute:#516088;--a:#0a7f9c;--b:#b45f06;--node:10,127,156}
+:root[data-theme="dark"]{--bg:#070b1a;--panel:rgba(14,21,44,.78);--line:#1f2b52;--text:#e6ebff;--mute:#8a96c0;--a:#5ce1e6;--b:#ffb454;--node:92,225,230}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 "Space Grotesk",system-ui,sans-serif}
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+main,header,footer{position:relative;z-index:1}
+a{color:var(--a);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;backdrop-filter:blur(10px);background:var(--panel);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;height:54px;overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;font-weight:700}nav a{color:var(--mute);font-size:15px}nav a:hover{color:var(--a);text-decoration:none}
+#theme{background:none;border:1px solid var(--line);color:var(--mute);border-radius:6px;padding:3px 9px;cursor:pointer;font:inherit;font-size:14px}
+.hero{padding:96px 0 80px}
+.hero h1{font-size:clamp(46px,9vw,100px);line-height:.98;margin:0 0 20px;letter-spacing:-.03em}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--a)}
+.term{display:inline-block;max-width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:14.5px;line-height:1.7;overflow-x:auto}
+.term .k{color:var(--b)}.term .s{color:var(--a)}.cur{display:inline-block;width:8px;height:1em;background:var(--a);vertical-align:-2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{padding:10px 18px;border-radius:8px;border:1px solid var(--a);font-weight:500}
+.btn.p{background:var(--a);color:var(--bg)}.btn:hover{text-decoration:none;transform:translateY(-2px)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:34px;margin:0 0 28px;letter-spacing:-.02em}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.box h3{margin:0 0 12px;font-size:18px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}.tags span{font:500 13px "JetBrains Mono",monospace;border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:var(--text)}
+.proj{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:26px 0;border-bottom:1px dashed var(--line)}
+.proj:last-child{border:0}
+.proj .when{color:var(--mute);font-size:13.5px}
+.proj h3{margin:0 0 4px;font-size:23px}.proj .role{color:var(--b);font-size:14px;margin-bottom:10px}
+.proj ul{margin:0 0 14px;padding-left:20px;color:var(--text)}.proj li{margin-bottom:6px;max-width:70ch}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.list{list-style:none;margin:0;padding:0}.list li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.list small{color:var(--mute)}
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.tl>div{position:relative;padding:0 0 26px 26px}
+.tl>div:before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--a)}
+.tl b{font-size:19px}.tl p{margin:2px 0;color:var(--mute)}
+.contact a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:20px}
+.contact small{display:inline-block;width:90px;color:var(--mute)}
+.msg{margin-top:40px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.msg h3{margin:0 0 4px;font-size:24px}.msg>p{margin:0 0 18px;color:var(--mute)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fg .full{grid-column:1/-1}
+.msg label{display:block;font-size:14px;color:var(--mute);margin-bottom:5px}
+.msg input,.msg textarea{width:100%;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;font-size:16px}
+.msg textarea{min-height:140px;resize:vertical}
+.msg input:focus,.msg textarea:focus{outline:2px solid var(--a);border-color:transparent}
+.msg .cta button{cursor:pointer;font:inherit;background:none;color:var(--a)}.msg .cta button.p{background:var(--a);color:var(--bg)}
+#note{margin:14px 0 0;font-size:14px;color:var(--b);min-height:1.4em}
+@media(max-width:700px){.fg{grid-template-columns:1fr}}
+footer{padding:36px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:700px){.proj{grid-template-columns:1fr;gap:6px}.hero{padding:60px 0 50px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="net" aria-hidden="true"></canvas>
+<nav><div class="wrap"><b class="mono">adityasanju.dev</b>
+<a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#learning">Certificates</a><a href="#education">Education</a><a href="#contact">Contact</a>
+<button id="theme" aria-label="Toggle light or dark theme">Theme</button></div></nav>
+
+<header class="wrap hero">
+<h1>Aditya<span>Sanju</span></h1>
+<div class="term mono">
+<span class="k">const</span> aditya = {<br>
+&nbsp;&nbsp;degree: <span class="s">"B.Tech Computer Science and Engineering"</span>,<br>
+&nbsp;&nbsp;university: <span class="s">"Lovely Professional University"</span>,<br>
+&nbsp;&nbsp;focus: [<span class="s">"AI/ML"</span>, <span class="s">"Computer Vision"</span>, <span class="s">"Data Analytics"</span>, <span class="s">"Full-stack"</span>],<br>
+&nbsp;&nbsp;status: <span class="s" id="typed"></span><span class="cur"></span><br>};
+</div>
+<div class="cta"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=adityasanju7@gmail.com&amp;su=Hello%20from%20your%20portfolio" target="_blank" rel="noopener">Email me</a><a class="btn" href="https://github.com/AdityaSanju-prog" target="_blank" rel="noopener">GitHub</a></div>
+</header>
+
+<main>
+<section id="skills"><div class="wrap"><h2>Skills</h2><div class="skills">
+<div class="box"><h3>Languages</h3><div class="tags"><span>Python</span><span>JavaScript</span><span>MySQL</span><span>C</span><span>C++</span><span>Java</span></div></div>
+<div class="box"><h3>AI / ML</h3><div class="tags"><span>Generative AI</span><span>AI Agents</span><span>Computer Vision</span><span>OpenAI API</span><span>Gemini API</span><span>Claude API</span><span>Hugging Face</span></div></div>
+<div class="box"><h3>Frameworks and libraries</h3><div class="tags"><span>HTML5</span><span>CSS3</span><span>React.js</span><span>React Router</span><span>FastAPI</span><span>Scikit-learn</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>XGBoost</span></div></div>
+<div class="box"><h3>Data structures and algorithms</h3><div class="tags"><span>Arrays</span><span>Linked Lists</span><span>Stacks</span><span>Queues</span><span>Trees</span><span>Graphs</span></div></div>
+<div class="box"><h3>Databases</h3><div class="tags"><span>PostgreSQL</span><span>MySQL</span></div></div>
+<div class="box"><h3>Core CS</h3><div class="tags"><span>DSA</span><span>DBMS</span><span>Operating Systems</span><span>Computer Networks</span></div></div>
+<div class="box"><h3>Tools</h3><div class="tags"><span>Cisco Packet Tracer</span><span>Tableau</span><span>Power BI</span></div></div>
+<div class="box"><h3>Soft skills</h3><div class="tags"><span>Problem-Solving</span><span>Adaptability</span><span>Leadership</span><span>Quick learner</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><h2>Projects</h2>
+<article class="proj"><div class="when mono">Mar 2026 – May 2026</div><div>
+<h3>AIHEALTH: AI-powered health tracker</h3><div class="role mono">Team project</div>
+<ul><li>Full-stack healthcare platform with personalized fitness plans, diet recommendations, health risk assessments and mental wellness insights.</li>
+<li>Integrated the Google Gemini 1.5 Flash API and built a dashboard that tracks heart rate, sleep, activity levels and mood.</li>
+<li>Secured authentication and RESTful APIs with JWT and Bcrypt.js.</li></ul>
+<div class="tags"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JavaScript</span><span>Gemini API</span><span>JWT</span><span>Bcrypt.js</span></div>
+<p><a href="https://github.com/sukhman01-ctrl/AIHEALTH" target="_blank" rel="noopener">View on GitHub</a></p></div></article>
+
+<article class="proj"><div class="when mono">Jan 2026 – Apr 2026</div><div>
+<h3>AI-based driver drowsiness detection with interactive wake-up system</h3>
+<ul><li>Real-time driver monitoring using computer vision and machine learning: Eye Aspect Ratio, Mouth Aspect Ratio and head pose estimation with OpenCV and MediaPipe.</li>
+<li>Wake-up protocol with blink tests, head movement exercises and reaction tests that verify alertness before the system resets.</li>
+<li>Reached 94.6% detection accuracy with XGBoost at 30–35 FPS for real-time use.</li></ul>
+<div class="tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>Tkinter</span><span>Pygame</span></div>
+<p><a href="https://github.com/sukhman01-ctrl/driver_drowsiness_system" target="_blank" rel="noopener">View on GitHub</a></p></div></article>
+
+<article class="proj"><div class="when mono">Jun 2026 – Jul 2026</div><div>
+<h3>E-commerce sales analytics dashboard</h3><div class="role mono">Power BI</div>
+<ul><li>Interactive dashboard over about 15,000 transactions tracking total sales, orders, profit, product performance, payment methods and sales trends.</li>
+<li>Cleaned data in Excel and Power BI and wrote DAX measures for sales, profit, orders, month and quarter analysis.</li>
+<li>Found top-performing products and how discounts affect profitability.</li></ul>
+<div class="tags"><span>Power BI</span><span>Excel</span><span>DAX</span><span>Data Cleaning</span><span>Data Visualization</span><span>Business Analytics</span></div></div></article>
+</div></section>
+
+<section id="learning"><div class="wrap"><h2>Training, certificates and activities</h2>
+<div class="box" style="margin-bottom:16px"><h3>Data Analytics Essentials with AI <small class="mono" style="color:var(--mute);font-weight:400">Jun – Jul 2026</small></h3>
+<p style="margin:0;max-width:75ch">SQL, Python, Power BI, Tableau and Excel, with a focus on analysis, visualization, dashboards and AI-assisted analytics. Graded A++ in the course run by the Centre for Professional Enhancement, Lovely Professional University. <a href="https://drive.google.com/file/d/12X77yZMnukQkx1U77KseBGBTcumZZI4q/view?usp=drive_link" target="_blank" rel="noopener">Certificate</a></p></div>
+<div class="two">
+<div class="box"><h3>Certificates</h3><ul class="list">
+<li><span><a href="https://drive.google.com/file/d/12X77yZMnukQkx1U77KseBGBTcumZZI4q/view?usp=drive_link" target="_blank" rel="noopener">Data Analytics Essentials with AI</a><br><small>Lovely Professional University</small></span><small class="mono">Jul 2026</small></li>
+<li><span><a href="https://drive.google.com/file/d/1k4n5TyRMxIgvbR-p_gng14cOFBDd3Mqe/view?usp=drive_link" target="_blank" rel="noopener">Database Management System, Part 1</a><br><small>Infosys</small></span><small class="mono">Jul 2026</small></li>
+<li><span><a href="https://drive.google.com/file/d/1mDf-TlbNV0_lURvqXmAIWtlPhCM3_rcB/view?usp=drive_link" target="_blank" rel="noopener">Programming in Java</a><br><small>Lovely Professional University</small></span><small class="mono">May 2026</small></li>
+<li><span><a href="https://drive.google.com/file/d/1mpjMuaHdciVS0_xPmRp4Kr8IRzXBSUtr/view?usp=drive_link" target="_blank" rel="noopener">Data Structure and Algorithm</a><br><small>Lovely Professional University</small></span><small class="mono">Jan 2026</small></li></ul></div>
+<div class="box"><h3>Co-curricular activities</h3><ul class="list">
+<li><span><a href="https://www.linkedin.com/feed/update/urn:li:activity:7472614434029600769/" target="_blank" rel="noopener">Discover Data Analysis badge</a><br><small>Microsoft Learn</small></span><small class="mono">Jul 2026</small></li>
+<li><span>AI workshops and seminars<br><small>Lovely Professional University</small></span><small class="mono">Mar 2026</small></li>
+<li><span><a href="https://drive.google.com/file/d/15R1q2jqr0enGNgvv2fR2fmuf-O545eA8/view?usp=drive_link" target="_blank" rel="noopener">Hackathon participation</a><br><small>Built a solution in a team</small></span><small class="mono">Feb 2024</small></li></ul></div>
+</div></div></section>
+
+<section id="education"><div class="wrap"><h2>Education</h2><div class="tl">
+<div><b>B.Tech, Computer Science and Engineering</b><p>Lovely Professional University, Phagwara, Punjab</p><p class="mono">Since August 2024 · CGPA 7.82</p></div>
+<div><b>Intermediate</b><p>St. John's School, Greater Noida, UP</p><p class="mono">April 2022 – March 2024 · 75%</p></div>
+<div><b>Matriculation</b><p>St. John's School, Greater Noida, UP</p><p class="mono">April 2020 – March 2022 · 66.40%</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap contact"><h2>Contact</h2>
+<a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=adityasanju7@gmail.com&amp;su=Hello%20from%20your%20portfolio" target="_blank" rel="noopener"><small class="mono">Email</small>adityasanju7@gmail.com</a>
+<a href="tel:+917303043819"><small class="mono">Mobile</small>+91-7303043819</a>
+<a href="https://github.com/AdityaSanju-prog" target="_blank" rel="noopener"><small class="mono">GitHub</small>AdityaSanju-prog</a>
+<a href="https://www.linkedin.com/in/aditya-sanju-022590321/" target="_blank" rel="noopener"><small class="mono">LinkedIn</small>Aditya-Sanju-02</a>
+<div class="cta"><a class="btn p" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=adityasanju7@gmail.com&amp;su=Hello%20from%20your%20portfolio" target="_blank" rel="noopener">Message me on Gmail</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Aditya Sanju</div></footer>
+
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById('theme');
+function dark(){var t=root.getAttribute('data-theme');return t?t==='dark':!matchMedia('(prefers-color-scheme:light)').matches}
+btn.onclick=function(){root.setAttribute('data-theme',dark()?'light':'dark');col()};
+var words=["Open to internships","Building AI products","Learning every day"],wi=0,ci=0,del=false,el=document.getElementById('typed');
+var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function type(){var w=words[wi];el.textContent='"'+w.slice(0,ci)+'"';
+if(!del&&ci<w.length){ci++;setTimeout(type,70)}else if(!del){del=true;setTimeout(type,1400)}
+else if(ci>0){ci--;setTimeout(type,35)}else{del=false;wi=(wi+1)%words.length;setTimeout(type,300)}}
+if(still){el.textContent='"'+words[0]+'"'}else{type()}
+var c=document.getElementById('net'),x=c.getContext('2d'),W,H,N=[],m={x:-999,y:-999},rgb='92,225,230';
+function col(){rgb=getComputedStyle(root).getPropertyValue('--node').trim()}
+function size(){W=c.width=innerWidth;H=c.height=innerHeight;var n=Math.min(110,Math.floor(W*H/14000));N=[];
+for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+function draw(){x.clearRect(0,0,W,H);
+for(var i=0;i<N.length;i++){var p=N[i];if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+x.fillStyle='rgba('+rgb+',.7)';x.beginPath();x.arc(p.x,p.y,1.6,0,6.3);x.fill();
+for(var j=i+1;j<N.length;j++){var q=N[j],d=Math.hypot(p.x-q.x,p.y-q.y);
+if(d<130){x.strokeStyle='rgba('+rgb+','+(.22*(1-d/130))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+var dm=Math.hypot(p.x-m.x,p.y-m.y);
+if(dm<170){x.strokeStyle='rgba(255,180,84,'+(.6*(1-dm/170))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}}
+if(!still)requestAnimationFrame(draw)}
+addEventListener('pointermove',function(e){m.x=e.clientX;m.y=e.clientY});
+addEventListener('resize',function(){size();if(still)draw()});
+col();size();draw();
+})();
+</script>
+</body>
+</html>
